@@ -1,8 +1,6 @@
 FROM golang:wheezy
 MAINTAINER Michele Bertasi
 
-ADD fs/ /
-
 # install pagkages
 RUN apt-get update                                                      && \
     apt-get install -y ncurses-dev libtolua-dev exuberant-ctags         && \
@@ -35,6 +33,11 @@ RUN apt-get update                                                      && \
     apt-get remove -y ncurses-dev                                       && \
     apt-get autoremove -y                                               && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# so we don't have long rebuilds when changing the user's environment
+ADD fs/ /
+RUN ln -s /usr/bin/vim /usr/bin/vi                                      && \
+    chown -R dev:dev /home/dev /go
 
 USER dev
 ENV HOME /home/dev
