@@ -20,6 +20,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'mbbill/undotree'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'Rykka/colorv.vim'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
