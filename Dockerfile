@@ -1,5 +1,5 @@
 FROM golang:wheezy
-MAINTAINER Michele Bertasi
+MAINTAINER Jonas Tingeborn
 
 # install pagkages
 RUN apt-get update                                                      && \
