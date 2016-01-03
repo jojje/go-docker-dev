@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+let mapleader = ","           " remap leader key
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
