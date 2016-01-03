@@ -115,3 +115,7 @@ au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 " rename the identifier under the cursor to a new name
 au FileType go nmap <Leader>e <Plug>(go-rename)
+
+" Buffer management
+nmap <Tab> :b#<CR>
+nmap <Leader>q :bd<CR>
